@@ -8,9 +8,16 @@ class Assets {
   static const String imagesOnboardingDoctor = 'assets/images/onboarding_doctor.png';
   static const String imagesSplash = 'assets/images/splash.png';
   static const String imagesSplashAndroid12Logo = 'assets/images/splash_android12_logo.png';
+  static const String svgsCamera = 'assets/svgs/camera.svg';
   static const String svgsDocdocLogo = 'assets/svgs/docdoc_logo.svg';
   static const String svgsDocdocLogoLowOpacity = 'assets/svgs/docdoc_logo_low_opacity.svg';
+  static const String svgsEyeSlash = 'assets/svgs/eye-slash.svg';
   static const String svgsGeneralSpeciality = 'assets/svgs/general_speciality.svg';
+  static const String svgsHome2 = 'assets/svgs/home-2.png';
+  static const String svgsMessageText = 'assets/svgs/message-text.svg';
   static const String svgsNotifications = 'assets/svgs/notifications.svg';
+  static const String svgsSearchNormal = 'assets/svgs/search-normal.svg';
+  static const String svgsSetting2 = 'assets/svgs/setting-2.svg';
+  static const String svgsShape = 'assets/svgs/Shape.svg';
 
 }
