@@ -1,3 +1,4 @@
+import 'package:doc_doc/Features/home/presentation/views/home_view.dart';
 import 'package:doc_doc/Features/login/presentation/views/widgets/terms_and_conditions_text.dart';
 import 'package:doc_doc/core/theming/colors.dart';
 import 'package:doc_doc/core/theming/styles.dart';
@@ -92,7 +93,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 AppTextButton(
                     buttonText: "Login",
                     textStyle: TextStyles.font16WhiteMedium,
-                    onPressed: () {}),
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeView(),));}),
                 SizedBox(
                   height: 24.h,
                 ),
