@@ -44,6 +44,7 @@ dependencies:
   shared_preferences: ^2.3.2
   device_preview: ^1.2.0
   flutter_secure_storage: ^9.2.2
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -101,6 +102,7 @@ flutter:
     - assets/
     - assets/svgs/
     - assets/images/
+    - assets/images/womanDoc.png
 
   fonts:
     - family: Inter

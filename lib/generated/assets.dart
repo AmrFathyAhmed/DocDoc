@@ -2,12 +2,17 @@
 class Assets {
   Assets._();
 
+  static const String assetsImagesWomanDoc = 'assets/images/womanDoc.png';
   static const String fontsInter28ptRegular = 'assets/fonts/Inter_28pt-Regular.ttf';
+  static const String imagesBrain = 'assets/images/Brain.png';
   static const String imagesHomeBluePattern = 'assets/images/home_blue_pattern.png';
+  static const String imagesHomeDoc = 'assets/images/homeDoc.png';
+  static const String imagesImage = 'assets/images/Image.png';
   static const String imagesOmar = 'assets/images/omar.png';
   static const String imagesOnboardingDoctor = 'assets/images/onboarding_doctor.png';
   static const String imagesSplash = 'assets/images/splash.png';
   static const String imagesSplashAndroid12Logo = 'assets/images/splash_android12_logo.png';
+  static const String imagesWomanDoc = 'assets/images/womanDoc.png';
   static const String svgsCamera = 'assets/svgs/camera.svg';
   static const String svgsDocdocLogo = 'assets/svgs/docdoc_logo.svg';
   static const String svgsDocdocLogoLowOpacity = 'assets/svgs/docdoc_logo_low_opacity.svg';
