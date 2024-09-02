@@ -1,8 +1,8 @@
-import 'package:doc_doc/Features/sign_up/presentation/views/sign_up_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/theming/styles.dart';
+import '../sign_up_view.dart';
 
 class DontHaveAccountText extends StatelessWidget {
   const DontHaveAccountText({super.key});
