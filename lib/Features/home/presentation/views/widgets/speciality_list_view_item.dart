@@ -1,8 +1,7 @@
-import 'package:doc_doc/generated/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
+import '../../../../../core/costant/specialityList.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 
@@ -26,14 +25,14 @@ class SpecialityListViewItem extends StatelessWidget {
                   radius: 30,
                   backgroundColor: ColorsManager.lightBlue,
                   child: Image.asset(
-                    Assets.imagesBrain,
+                    specialitylList.elementAt(itemIndex).image,
                     height: 24.h,
                     width: 24.w,
                   ),
                 ),
           SizedBox(height: 8.h,),
           Text(
-           'Neurologic',
+            specialitylList.elementAt(itemIndex).name,
             overflow: TextOverflow.ellipsis,
             style: TextStyles.font12DarkBlueRegular,
           ),

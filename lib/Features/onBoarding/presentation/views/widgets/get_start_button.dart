@@ -1,8 +1,8 @@
-import 'package:doc_doc/Features/login/presentation/views/login_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
+import '../../../../auth/presentation/views/login_view.dart';
 
 
 class GetStartedButton extends StatelessWidget {

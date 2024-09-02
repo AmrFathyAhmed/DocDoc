@@ -1,9 +1,8 @@
-import 'package:doc_doc/Features/login/presentation/views/login_view.dart';
-import 'package:doc_doc/Features/sign_up/presentation/views/sign_up_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/theming/styles.dart';
+import '../login_view.dart';
 
 class AlreadyHaveAcount extends StatelessWidget {
   const AlreadyHaveAcount({super.key});

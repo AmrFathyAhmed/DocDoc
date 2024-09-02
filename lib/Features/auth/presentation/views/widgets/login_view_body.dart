@@ -1,5 +1,4 @@
-import 'package:doc_doc/Features/home/presentation/views/home_view.dart';
-import 'package:doc_doc/Features/login/presentation/views/widgets/terms_and_conditions_text.dart';
+import 'package:doc_doc/Features/auth/presentation/views/widgets/terms_and_conditions_text.dart';
 import 'package:doc_doc/core/theming/colors.dart';
 import 'package:doc_doc/core/theming/styles.dart';
 import 'package:doc_doc/core/widgets/app_text_button.dart';
@@ -10,6 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/helpers/app_regex.dart';
+import '../../../../home/presentation/views/nav_bar_widget.dart';
 import 'dont_have_account_text.dart';
 
 class LoginViewBody extends StatefulWidget {
@@ -93,7 +93,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                 AppTextButton(
                     buttonText: "Login",
                     textStyle: TextStyles.font16WhiteMedium,
-                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeView(),));}),
+                    onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const UserMainLayoutScreen(),));}),
                 SizedBox(
                   height: 24.h,
                 ),

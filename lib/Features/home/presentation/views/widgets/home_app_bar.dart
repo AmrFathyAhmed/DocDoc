@@ -1,3 +1,4 @@
+import 'package:doc_doc/Features/home/presentation/views/notification_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -25,11 +26,16 @@ class HomeTopBar extends StatelessWidget {
           ],
         ),
         const Spacer(),
-        CircleAvatar(
-          radius: 24.0,
-          backgroundColor: ColorsManager.moreLighterGray,
-          child: SvgPicture.asset(
-            'assets/svgs/notifications.svg',
+        GestureDetector(
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => HomeNotificationView(),));
+    }
+          ,child: CircleAvatar(
+            radius: 24.0,
+            backgroundColor: ColorsManager.moreLighterGray,
+            child: SvgPicture.asset(
+              'assets/svgs/notifications.svg',
+            ),
           ),
         )
       ],

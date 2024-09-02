@@ -1,5 +1,4 @@
-import 'package:doc_doc/Features/login/presentation/views/widgets/terms_and_conditions_text.dart';
-import 'package:doc_doc/Features/sign_up/presentation/views/widgets/already_have_acount.dart';
+import 'package:doc_doc/Features/auth/presentation/views/widgets/terms_and_conditions_text.dart';
 import 'package:doc_doc/core/theming/colors.dart';
 import 'package:doc_doc/core/theming/styles.dart';
 import 'package:doc_doc/core/widgets/app_text_button.dart';
@@ -8,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/helpers/app_regex.dart';
-import '../../../../login/presentation/views/widgets/dont_have_account_text.dart';
+import 'already_have_acount.dart';
 
 class SignUpViewBody extends StatefulWidget {
   const SignUpViewBody({Key? key}) : super(key: key);
