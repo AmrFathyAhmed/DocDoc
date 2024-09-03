@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/theming/styles.dart';
-import '../doctor_speciality_view.dart';
 
 class DoctorsSpecialitySeeAll extends StatelessWidget {
   const DoctorsSpecialitySeeAll({super.key, required this.title, required this.onTap});

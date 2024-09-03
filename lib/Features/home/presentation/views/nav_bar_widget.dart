@@ -45,8 +45,8 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Search',
         onPressed: () {
-          token;
-          HomeRepoImpl().getDoctors(token: token! );
+          // token;
+          // HomeRepoImpl().getDoctors(token: token! );
         },
         backgroundColor: AppColors.primary,
         elevation: 0,
