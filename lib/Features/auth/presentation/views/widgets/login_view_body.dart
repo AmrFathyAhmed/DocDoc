@@ -55,12 +55,13 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           Navigator.pop(context);
 
           if (state is LoginSuccess) {
-            Navigator.push(
+            Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (context) => const UserMainLayoutScreen(),
               ),
             );
+
 
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(

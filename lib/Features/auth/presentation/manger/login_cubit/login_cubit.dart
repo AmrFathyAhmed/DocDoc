@@ -3,11 +3,9 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:doc_doc/Features/auth/presentation/manger/login_cubit/login_state.dart';
 import 'package:doc_doc/core/api_helper/end_points.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/cache/cache_helper.dart';
-import '../../../../../core/errors/exceptions.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit() : super(LoginInit());
@@ -25,18 +23,17 @@ class LoginCubit extends Cubit<LoginState> {
         },
       );
 
-      // No need to jsonDecode, response.data should already be a Map<String, dynamic>
       var responseData = response.data;
 
       // Ensure responseData is a Map and not already decoded JSON
       if (responseData is Map<String, dynamic>) {
         if (response.statusCode == 200 && responseData[ApiKeys.status] == true) {
-          // Uncomment and use these lines as needed
-          // await getIt<CacheHelper>().saveData(
-          //   key: ApiKeys.token,
-          //   value: responseData[ApiKeys.data][ApiKeys.token],
-          // );
-          // token = responseData[ApiKeys.data][ApiKeys.token];
+
+          await CacheHelper().saveData(
+            key: ApiKeys.token,
+            value: responseData[ApiKeys.data][ApiKeys.token],
+          );
+         // token = responseData[ApiKeys.data][ApiKeys.token];
           emit(LoginSuccess());
         } else {
           emit(LoginFailure(

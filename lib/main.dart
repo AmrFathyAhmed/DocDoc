@@ -3,10 +3,13 @@ import 'package:doc_doc/Features/onBoarding/presentation/views/on_boarding_view.
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/cache/cache_helper.dart';
 import 'core/theming/colors.dart';
 
 void main() async{
+
   WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper().init();
   await ScreenUtil.ensureScreenSize();
   runApp(DevicePreview(enabled: false, builder: (context) => const DocDoc()));
 }
