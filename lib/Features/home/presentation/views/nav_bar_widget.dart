@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../generated/assets.dart';
 import '../../../profile/presentation/views/profile_view.dart';
+import '../../data/repo/home_repo_impl.dart';
 import 'home_view.dart';
 
 class UserMainLayoutScreen extends StatefulWidget {
@@ -43,6 +45,8 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Search',
         onPressed: () {
+          token;
+          HomeRepoImpl().getDoctors(token: token! );
         },
         backgroundColor: AppColors.primary,
         elevation: 0,

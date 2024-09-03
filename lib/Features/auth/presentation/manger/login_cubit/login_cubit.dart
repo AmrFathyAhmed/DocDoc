@@ -6,6 +6,7 @@ import 'package:doc_doc/core/api_helper/end_points.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/cache/cache_helper.dart';
+import '../../../../../core/helpers/constants.dart';
 
 class LoginCubit extends Cubit<LoginState> {
   LoginCubit() : super(LoginInit());
@@ -33,7 +34,7 @@ class LoginCubit extends Cubit<LoginState> {
             key: ApiKeys.token,
             value: responseData[ApiKeys.data][ApiKeys.token],
           );
-         // token = responseData[ApiKeys.data][ApiKeys.token];
+          token = responseData[ApiKeys.data][ApiKeys.token];
           emit(LoginSuccess());
         } else {
           emit(LoginFailure(

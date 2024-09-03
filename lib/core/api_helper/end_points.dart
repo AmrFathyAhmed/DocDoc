@@ -9,6 +9,7 @@ class EndPoints {
   static const String myAppointment = "appointment/index";
   static const String profile = "user/profile";
   static const String updateProfile = "user/update";
+  static const String allDoctor= "doctor/index";
 }
 
 class ApiKeys {

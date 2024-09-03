@@ -1,9 +1,13 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:doc_doc/Features/auth/presentation/views/login_view.dart';
 import 'package:doc_doc/Features/onBoarding/presentation/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'Features/home/presentation/views/nav_bar_widget.dart';
 import 'core/cache/cache_helper.dart';
+import 'core/helpers/constants.dart';
+import 'core/helpers/get_user_token.dart';
 import 'core/theming/colors.dart';
 
 void main() async{
@@ -11,6 +15,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper().init();
   await ScreenUtil.ensureScreenSize();
+  await getUserToken();
   runApp(DevicePreview(enabled: false, builder: (context) => const DocDoc()));
 }
 
@@ -40,7 +45,7 @@ class DocDoc extends StatelessWidget {
           home: child,
         );
       },
-      child: const OnBoardingView(),
+      child: token==null?OnBoardingView():UserMainLayoutScreen(),
     );
   }
 }

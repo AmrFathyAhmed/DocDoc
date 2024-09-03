@@ -10,6 +10,7 @@ class DoctorsListView extends StatelessWidget {
     return ListView.builder(
       itemCount:8,
       shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return DoctorsListViewItem(
 
