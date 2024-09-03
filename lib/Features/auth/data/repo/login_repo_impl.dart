@@ -1,14 +1,14 @@
-import 'dart:ffi';
 
 import 'package:dio/dio.dart';
 
 class AuthRepoImpl{
- Future<void> login(String email ,String password)async{
+ login({required String email ,required String password})async{
      try {
-       await Dio().post("https://vcare.integration25.com/api/auth/auth",data:{
-        "email":email,
-        "password":password
+      var respond = await Dio().post("https://vcare.integration25.com/api/auth/login",data:{
+        "email": email,
+        "password": password
            } );
+      return respond;
      } on Exception catch (e) {
       print(e);
      }
