@@ -1,6 +1,7 @@
 
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
+import '../../../../home/data/models/doctor_model.dart';
 import 'about_tab.dart';
 import 'doctor_details_card_info.dart';
 import 'location_tab.dart';
@@ -14,11 +15,12 @@ class DoctorDetailsViewBody extends StatelessWidget {
     required this.rating,
     required this.name,
     required this.specialization,
-    required this.degree,
+    required this.degree, required this.doctor,
 
   });
 
   final String name, image, rating, specialization, degree;
+  final Doctor doctor;
 
 
   @override
@@ -58,7 +60,7 @@ class DoctorDetailsViewBody extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   AboutTab(
-
+                    doctor: doctor,
                   ),
                   LocationTab(
 

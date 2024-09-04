@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../../core/costant/doctor_images.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../data/models/doctor_model.dart';
@@ -24,7 +23,7 @@ class DoctorsListViewItem extends StatelessWidget {
     int randomReviewCount = 1000 + random.nextInt(4000);
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorDetailsView(),));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DoctorDetailsView(doctor: doctor,images: images,),));
       },
       child: Container(
         margin: EdgeInsets.only(bottom: 16.h),
@@ -32,8 +31,7 @@ class DoctorsListViewItem extends StatelessWidget {
           children: [
             CachedNetworkImage(
               imageUrl:
-                 // "https://th.bing.com/th/id/OIP.T0nPc_C2Z0gtaD6sI1ryRQHaHp?rs=1&pid=ImgDetMain"
-                images??doctor.photo,
+                images,
               progressIndicatorBuilder: (context, url, downloadProgress) {
                 return Shimmer.fromColors(
                   baseColor: ColorsManager.lightGray,
@@ -68,7 +66,6 @@ class DoctorsListViewItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                     //'Dr. Randy Wigham',
                     doctor.name,
                     style: TextStyles.font18DarkBlueBold,
                     overflow: TextOverflow.ellipsis,

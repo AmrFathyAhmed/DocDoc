@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
+import '../../../../home/data/models/doctor_model.dart';
 
 class AboutTab extends StatelessWidget {
-  const AboutTab({super.key,});
+  const AboutTab({super.key, required this.doctor,});
+  final Doctor doctor;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -22,7 +24,7 @@ class AboutTab extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              "Dr. Randy Wigham is a dedicated {doctor.degree} with a specialization in {doctor.specialization!.name}. They are committed to providing compassionate and patient-centered care, utilizing the latest advancements in medical science to achieve optimal health outcomes.\n\n{doctor.name} believes in building strong relationships with their patients, fostering open communication, and empowering them to take an active role in their health journey.",
+              "Dr. ${doctor.name}is a dedicated ${doctor.degree} with a specialization in ${doctor.specialization.name}. They are committed to providing compassionate and patient-centered care, utilizing the latest advancements in medical science to achieve optimal health outcomes.\n\n${doctor.name} believes in building strong relationships with their patients, fostering open communication, and empowering them to take an active role in their health journey.",
               style: TextStyles.style14W400,
             ),
             const SizedBox(height: 24),
@@ -34,7 +36,7 @@ class AboutTab extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              'Monday - Friday, {doctor.startTime} - {doctor.endTime}',
+              'Monday - Friday, ${doctor.startTime} - ${doctor.endTime}',
               style: TextStyles.style14W400,
             ),
             const SizedBox(height: 24),
@@ -46,12 +48,12 @@ class AboutTab extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-              "4726482464",
+              doctor.phone,
               style:TextStyles.style14W400,
             ),
             const SizedBox(height: 12),
             Text(
-              "RandyWigham@gmail.com",
+              doctor.email,
               style: TextStyles.style14W400,
             ),
             const SizedBox(height: 24),
@@ -63,7 +65,7 @@ class AboutTab extends StatelessWidget {
             ),
             const SizedBox(height: 12),
             Text(
-             "400" ,
+             doctor.appointPrice.toString() ,
               style: TextStyles.style14W400,
             ),
           ],

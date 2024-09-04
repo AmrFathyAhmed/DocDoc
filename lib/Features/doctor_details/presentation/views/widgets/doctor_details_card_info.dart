@@ -30,8 +30,8 @@ class DoctordetailsCardInfo extends StatelessWidget {
           borderRadius: BorderRadiusDirectional.circular(12),
           child:   CachedNetworkImage(
             imageUrl:
-            "https://th.bing.com/th/id/OIP.T0nPc_C2Z0gtaD6sI1ryRQHaHp?rs=1&pid=ImgDetMain",
-            progressIndicatorBuilder: (context, url, downloadProgress) {
+            image//"https://th.bing.com/th/id/OIP.T0nPc_C2Z0gtaD6sI1ryRQHaHp?rs=1&pid=ImgDetMain",
+            ,progressIndicatorBuilder: (context, url, downloadProgress) {
               return Shimmer.fromColors(
                 baseColor: ColorsManager.lightGray,
                 highlightColor: Colors.white,

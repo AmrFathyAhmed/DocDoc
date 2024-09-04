@@ -5,29 +5,31 @@ import 'package:flutter/material.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 import '../../../book_appointment/presentation/views/book_appointment_view.dart.dart';
+import '../../../home/data/models/doctor_model.dart';
 
 class DoctorDetailsView extends StatelessWidget {
-  const DoctorDetailsView({super.key});
-
+  const DoctorDetailsView({super.key, required this.doctor, required this.images});
+  final Doctor doctor;
+  final String images;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(
         context,
-        title: "Dr Randy Wigham",
+        title: 'Dr. ${doctor.name}',
       ),
       bottomNavigationBar: MakeAnAppointmentBtn(
         text: "Make An Appointment",
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => const BookAppointmentView(),));
+          Navigator.push(context, MaterialPageRoute(builder: (context) =>  BookAppointmentView(images: images,doctor: doctor,),));
         },
       ),
       body: DoctorDetailsViewBody(
         image:
-            'https://th.bing.com/th/id/OIP.T0nPc_C2Z0gtaD6sI1ryRQHaHp?rs=1&pid=ImgDetMain',
+            images,
         rating: '4.8',
-        name: 'Dr. Randy Wigham',
-        specialization: 'General', degree: 'RSUD Gatot Subroto',
+        name: 'Dr. ${doctor.name}',
+        specialization: doctor.specialization.name, degree: doctor.degree, doctor: doctor,
       ),
     );
   }
