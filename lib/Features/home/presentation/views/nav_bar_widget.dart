@@ -1,5 +1,6 @@
 
 import 'package:doc_doc/Features/home/presentation/views/widgets/user_bottom_nav_bar_widget.dart';
+import 'package:doc_doc/Features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -8,6 +9,7 @@ import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../generated/assets.dart';
 import '../../../Inbox/presentation/views/inbox_view.dart';
+import '../../../my_appointment/presentation/views/my_appointment_view.dart';
 import '../../../profile/presentation/views/profile_view.dart';
 import '../../data/repo/home_repo_impl.dart';
 import 'home_view.dart';
@@ -29,7 +31,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
     screens = [
       HomeView(),
       InboxView(),
-      HomeView(),
+      MyAppointmentView(),
 
       ProfileView(),
 
@@ -46,8 +48,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Search',
         onPressed: () {
-          // token;
-          // HomeRepoImpl().getDoctors(token: token! );
+          Navigator.push(context, MaterialPageRoute(builder: (context) => SearchView(),));
         },
         backgroundColor: AppColors.primary,
         elevation: 0,

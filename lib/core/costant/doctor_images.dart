@@ -1,5 +1,8 @@
 List<String> doctorImages = [
   'https://th.bing.com/th/id/R.44f4696749932cbac70eac73e2b859bb?rik=YD4GSIvkVeFEiw&pid=ImgRaw&r=0',
+  'https://th.bing.com/th/id/OIP.WZuFeD-_Btx-rRmknaI_9AHaHa?rs=1&pid=ImgDetMain',
+    'https://th.bing.com/th/id/R.215c1ff399e961851cc11a7810886a0e?rik=oZfxvnavGwz6cA&riu=http%3a%2f%2fwww.writergirl.com%2fwp-content%2fuploads%2f2014%2f11%2fDoctor-790X1024.jpg&ehk=CmnYm47Si7SLogCKQcVQ9Onueou53ycpcjvFFc3Ej00%3d&risl=&pid=ImgRaw&r=0',
+  'https://th.bing.com/th/id/R.44f4696749932cbac70eac73e2b859bb?rik=YD4GSIvkVeFEiw&pid=ImgRaw&r=0',
   'https://thumbs.dreamstime.com/b/indian-doctor-mature-male-medical-standing-isolated-white-background-handsome-model-portrait-31871541.jpg',
   'https://www.publicdomainpictures.net/pictures/210000/velka/doctor-1490804643Rfi.jpg',
   'https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg',
