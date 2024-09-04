@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/styles.dart';
 import '../../../../../generated/assets.dart';
+import '../../../../home/data/models/doctor_model.dart';
 import 'book_item_info.dart';
 import 'payment_info_list_tile.dart';
 
@@ -15,13 +16,15 @@ class SummaryPage extends StatelessWidget {
     this.note,
     this.image,
     this.rating,
-    this.paymentMethod,
+    this.paymentMethod, required this.doctor, required this.images,
   });
   final DateTime? selectedDateTime;
   final String? note;
   final String? image;
   final String? rating;
   final String? paymentMethod;
+  final Doctor doctor;
+  final String images;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -69,8 +72,8 @@ class SummaryPage extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadiusDirectional.circular(12),
-                child: Image.asset(
-                  image!,
+                child: Image.network(
+                  images,
                   fit: BoxFit.cover,
                   height: 80,
                   width: 80,
@@ -82,13 +85,13 @@ class SummaryPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                  "Dr. Randy Wigham",
+                  doctor.name,
                       style: TextStyles.style16W700,
                       overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      "General| RSUD Gatot Subroto",
+                      "${doctor.specialization.name}| ${doctor.degree}",
                       style: TextStyles.style12W500,
                       overflow: TextOverflow.ellipsis,
                     ),

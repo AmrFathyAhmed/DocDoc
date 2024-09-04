@@ -7,6 +7,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../../../core/helpers/constants.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../generated/assets.dart';
+import '../../../Inbox/presentation/views/inbox_view.dart';
 import '../../../profile/presentation/views/profile_view.dart';
 import '../../data/repo/home_repo_impl.dart';
 import 'home_view.dart';
@@ -27,7 +28,7 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
     super.initState();
     screens = [
       HomeView(),
-      HomeView(),
+      InboxView(),
       HomeView(),
 
       ProfileView(),

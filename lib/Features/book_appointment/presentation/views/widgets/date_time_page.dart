@@ -57,7 +57,8 @@ class DateAndTimePage extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           SelectDateWidget(
-            onDateChange: (value) {},
+            onDateChange: onDateTimeChanged,
+
           ),
           const SizedBox(height: 24),
           AvailableTimeSelection(

@@ -6,12 +6,14 @@ import 'package:flutter/material.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../generated/assets.dart';
 import '../../../../doctor_details/presentation/views/doctor_details_view.dart';
+import '../../../../home/data/models/doctor_model.dart';
 import '../../../../home/presentation/views/widgets/notifaction_app_bar.dart';
 import 'date_time_page.dart';
 
 class BookAppointmentView extends StatefulWidget {
-  const BookAppointmentView({super.key});
-
+  const BookAppointmentView({super.key, required this.doctor, required this.images});
+  final Doctor doctor;
+  final String images;
   @override
   State<BookAppointmentView> createState() => _BookAppointmentViewState();
 }
@@ -72,7 +74,7 @@ class _BookAppointmentViewState extends State<BookAppointmentView> {
                     note: note,
                     image: Assets.imagesDoctor1,
                     rating: "4.8",
-                    paymentMethod: paymentMethod,
+                    paymentMethod: paymentMethod, doctor: widget.doctor, images: widget.images,
                   ),
                 ],
               ),

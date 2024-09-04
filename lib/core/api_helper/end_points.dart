@@ -17,6 +17,9 @@ class ApiKeys {
   static const String token = "token";
   static const String user = "user";
   static const String id = "id";
+  static const String doctorId = "doctor_id";
+  static const String startTime = "start_time";
+  static const String notes = "notes";
   static const String status = "status";
   static const String name = "name";
   static const String email = "email";

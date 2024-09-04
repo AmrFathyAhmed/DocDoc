@@ -23,7 +23,7 @@ class _AvailableTimeSelectionState extends State<AvailableTimeSelection> {
     '19:00',
   ];
 
-  String selectedTime = '';
+  String selectedTime = '14:00';
 
   @override
   Widget build(BuildContext context) {

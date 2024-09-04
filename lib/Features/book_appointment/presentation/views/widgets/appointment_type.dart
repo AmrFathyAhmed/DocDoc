@@ -15,7 +15,7 @@ class AppointmentType extends StatefulWidget {
 }
 
 class _AppointmentTypeState extends State<AppointmentType> {
-  String _selectedAppointmentType = '';
+  String _selectedAppointmentType = 'In Person';
 
   @override
   Widget build(BuildContext context) {

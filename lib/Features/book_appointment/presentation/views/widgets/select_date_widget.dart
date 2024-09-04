@@ -15,6 +15,7 @@ class SelectDateWidget extends StatelessWidget {
       activeColor: AppColors.primary,
       initialDate: DateTime.now(),
       onDateChange: onDateChange,
+
       headerProps: const EasyHeaderProps(
         monthPickerType: MonthPickerType.switcher,
         dateFormatter: DateFormatter.fullDateDMY(),
