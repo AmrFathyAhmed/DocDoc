@@ -36,6 +36,9 @@ class Assets {
   static const String imagesPediatric = 'assets/images/Pediatric.png';
   static const String imagesProfileAvatar = 'assets/images/profile_avatar.png';
   static const String imagesPsychiatry = 'assets/images/Psychiatry.png';
+  static const String imagesRev1 = 'assets/images/rev1.png';
+  static const String imagesRev2 = 'assets/images/rev2.png';
+  static const String imagesRev3 = 'assets/images/rev3.png';
   static const String imagesReview1 = 'assets/images/review1.jpg';
   static const String imagesReview2 = 'assets/images/review2.jpg';
   static const String imagesReview3 = 'assets/images/review3.png';
@@ -81,6 +84,7 @@ class Assets {
   static const String svgsNotofication = 'assets/svgs/notofication.svg';
   static const String svgsPayPal = 'assets/svgs/PayPal.svg';
   static const String svgsPayoneer = 'assets/svgs/Payoneer.svg';
+  static const String svgsPersonalfilesBro = 'assets/svgs/Personal files-bro.svg';
   static const String svgsPersonalcard = 'assets/svgs/personalcard.svg';
   static const String svgsScanner = 'assets/svgs/scanner.svg';
   static const String svgsScheduleChanged = 'assets/svgs/ScheduleChanged.svg';

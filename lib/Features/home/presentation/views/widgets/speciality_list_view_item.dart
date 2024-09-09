@@ -25,14 +25,14 @@ class SpecialityListViewItem extends StatelessWidget {
                   radius: 30,
                   backgroundColor: ColorsManager.lightBlue,
                   child: Image.asset(
-                    specialitylList.elementAt(itemIndex).image,
+                    specialityList.elementAt(itemIndex).image,
                     height: 24.h,
                     width: 24.w,
                   ),
                 ),
           SizedBox(height: 8.h,),
           Text(
-            specialitylList.elementAt(itemIndex).name,
+            specialityList.elementAt(itemIndex).name,
             overflow: TextOverflow.ellipsis,
             style: TextStyles.font12DarkBlueRegular,
           ),

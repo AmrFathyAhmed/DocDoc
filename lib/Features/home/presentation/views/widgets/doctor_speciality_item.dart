@@ -32,7 +32,7 @@ class DoctorSpecialityItem extends StatelessWidget {
               padding: const EdgeInsetsDirectional.all(20),
               child: Center(
                 child: Image.asset(
-                  specialitylList.elementAt(index).image,
+                  specialityList.elementAt(index).image,
                   height: 40,
                 ),
               ),
@@ -41,7 +41,7 @@ class DoctorSpecialityItem extends StatelessWidget {
           const SizedBox(height: 12),
           Expanded(
             child: Text(
-            specialitylList.elementAt(index).name,
+            specialityList.elementAt(index).name,
               style: TextStyles.style12W400.copyWith(
                 color: AppColors.black2,
               ),
