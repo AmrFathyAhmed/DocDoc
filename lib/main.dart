@@ -1,9 +1,7 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:doc_doc/Features/auth/presentation/views/login_view.dart';
 import 'package:doc_doc/Features/onBoarding/presentation/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'Features/home/presentation/views/nav_bar_widget.dart';
 import 'core/cache/cache_helper.dart';
 import 'core/helpers/constants.dart';
@@ -39,6 +37,7 @@ class DocDoc extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           // You can use the library anywhere in the app even in theme
           theme: ThemeData(
+            fontFamily:fontFamily,
             primaryColor: ColorsManager.mainBlue,
             scaffoldBackgroundColor: Colors.white,
           ),

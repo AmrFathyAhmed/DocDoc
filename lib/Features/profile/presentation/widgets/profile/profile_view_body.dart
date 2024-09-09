@@ -1,6 +1,5 @@
 import '../../../../../generated/assets.dart';
 import 'info_sheet_body.dart';
-import 'profile_info_sheet.dart';
 import 'package:flutter/material.dart';
 
 class ProfileViewBody extends StatelessWidget {

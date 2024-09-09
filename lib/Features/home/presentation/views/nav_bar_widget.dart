@@ -1,4 +1,3 @@
-
 import 'package:doc_doc/Features/home/presentation/views/widgets/user_bottom_nav_bar_widget.dart';
 import 'package:doc_doc/Features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
@@ -29,14 +28,10 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
   void initState() {
     super.initState();
     screens = [
-      HomeView(),
-      InboxView(),
-      MyAppointmentView(),
-
-      ProfileView(),
-
-
-
+      const HomeView(),
+      const InboxView(),
+      const MyAppointmentView(),
+      const ProfileView(),
     ];
   }
 
@@ -48,29 +43,29 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
       floatingActionButton: FloatingActionButton(
         tooltip: 'Search',
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => SearchView(),));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SearchView(),
+              ));
         },
         backgroundColor: AppColors.primary,
         elevation: 0,
-
         clipBehavior: Clip.none,
-
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadiusDirectional.circular(24),
         ),
         child: Container(
-         height: 72.h,
-
+          height: 72.h,
           decoration: BoxDecoration(
             borderRadius: BorderRadiusDirectional.circular(20),
             color: AppColors.primary,
           ),
-          child: SizedBox( height: 20.h,
+          child: SizedBox(
+            height: 20.h,
             width: 20.w,
             child: SvgPicture.asset(
               Assets.svgsNavSearch,
-
-
             ),
           ),
         ),
@@ -86,11 +81,15 @@ class _UserMainLayoutScreenState extends State<UserMainLayoutScreen> {
     );
   }
 }
+
 class CustomFabLocation extends FloatingActionButtonLocation {
   @override
   Offset getOffset(ScaffoldPrelayoutGeometry scaffoldGeometry) {
-    double x = scaffoldGeometry.scaffoldSize.width / 2 - scaffoldGeometry.floatingActionButtonSize.width / 2;
-    double y = scaffoldGeometry.scaffoldSize.height - scaffoldGeometry.floatingActionButtonSize.height - 33.h; // Adjust the height as needed
+    double x = scaffoldGeometry.scaffoldSize.width / 2 -
+        scaffoldGeometry.floatingActionButtonSize.width / 2;
+    double y = scaffoldGeometry.scaffoldSize.height -
+        scaffoldGeometry.floatingActionButtonSize.height -
+        33.h; // Adjust the height as needed
     return Offset(x, y);
   }
 }

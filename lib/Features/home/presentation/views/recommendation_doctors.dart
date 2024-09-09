@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/helpers/constants.dart';
 import '../../data/repo/home_repo_impl.dart';
-import '../manger/home_cubit.dart';
+import '../Cubits/recommended_doctors_cubit/home_cubit.dart';
 
 class RecommendationDoctors extends StatelessWidget {
   const RecommendationDoctors({Key? key}) : super(key: key);
