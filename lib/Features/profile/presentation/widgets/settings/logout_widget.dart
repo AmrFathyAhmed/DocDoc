@@ -1,4 +1,5 @@
 
+import '../../../../../core/helpers/constants.dart';
 import '../../../../../core/theming/colors.dart';
 import '../../../../../generated/assets.dart';
 import 'logout_dialog.dart';
@@ -18,7 +19,7 @@ class LogOutWidget extends StatelessWidget {
        // var profileCubit = context.read<ProfileCubit>();
         showCupertinoDialog(
           context: context,
-          barrierDismissible: true, builder: (BuildContext context) { return Container(); },
+          barrierDismissible: true, builder: (BuildContext context) { return LogOutDialog(token: token!,); },
 
         );
       },
