@@ -3,8 +3,9 @@ import 'doctor_model.dart';
 class DoctorSpecialityItemModel {
   final String image;
   final String name;
+  final int id;
 
-  DoctorSpecialityItemModel( {required this.image,required this.name,});
+  DoctorSpecialityItemModel(  {required this.id,required this.image,required this.name,});
 }
 class SpecializationWithDoctors {
   final int id;

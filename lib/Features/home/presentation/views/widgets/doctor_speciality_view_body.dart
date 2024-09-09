@@ -1,4 +1,7 @@
 
+import 'package:doc_doc/Features/home/presentation/views/widgets/speciality_all_doctors.dart';
+
+import '../../../../../core/costant/specialityList.dart';
 import 'doctor_speciality_item.dart';
 import 'package:flutter/material.dart';
 
@@ -24,10 +27,15 @@ class DoctorSpecialityViewBody extends StatelessWidget {
                   childAspectRatio: 0.68,
                 ),
                 itemBuilder: (context, index) {
-                  var i = index;
-                  return DoctorSpecialityItem(
 
-                    index: i,
+                  return GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => SpecialityAllDoctors(index: index+1,sName: specialityList[index].name,) ,));
+                    },
+                    child: DoctorSpecialityItem(
+
+                      index: index,
+                    ),
                   );
                 },
       );

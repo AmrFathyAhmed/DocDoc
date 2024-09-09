@@ -1,4 +1,4 @@
-import '../../data/models/doctor_model.dart';
+import '../../../data/models/doctor_model.dart';
 
 class HomeState {}
 class HomeInit extends HomeState{}

@@ -1,10 +1,10 @@
-import 'package:doc_doc/Features/home/presentation/manger/home_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/costant/doctor_images.dart';
 import '../../../../../core/theming/colors.dart';
-import '../../manger/home_cubit.dart';
+import '../../Cubits/recommended_doctors_cubit/home_cubit.dart';
+import '../../Cubits/recommended_doctors_cubit/home_state.dart';
 import 'doctors_list_view_item.dart';
 
 class DoctorsListView extends StatelessWidget {
